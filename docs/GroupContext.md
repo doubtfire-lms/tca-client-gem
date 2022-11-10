@@ -1,0 +1,9 @@
+# TCAClient::GroupContext
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | (required)  | [optional] 
+**name** | **String** |  | [optional] 
+**owners** | [**Array&lt;Users&gt;**](Users.md) |  | [optional] 
+
