@@ -1,8 +1,20 @@
 # TCAClient::Error
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**status** | **String** | an HTTP Response JobStatus Code | [optional] 
-**message** | **String** | A message explaining what happened | [optional] 
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **status** | **String** | an HTTP Response JobStatus Code | [optional] |
+| **message** | **String** | A message explaining what happened | [optional] |
+
+## Example
+
+```ruby
+require 'tca_client'
+
+instance = TCAClient::Error.new(
+  status: null,
+  message: null
+)
+```
 
