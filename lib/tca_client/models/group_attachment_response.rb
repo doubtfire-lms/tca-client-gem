@@ -58,7 +58,7 @@ module TCAClient
         :'id' => :'id',
         :'title' => :'title',
         :'status' => :'status',
-        :'template' => :'template'
+        :'template' => :'template',
         :'error_code' => :'error_code'
       }
     end
@@ -117,7 +117,7 @@ module TCAClient
       end
 
       if attributes.key?(:'error_code')
-        self.template = attributes[:'error_code']
+        self.error_code = attributes[:'error_code']
       end
     end
 
@@ -154,7 +154,8 @@ module TCAClient
           id == o.id &&
           title == o.title &&
           status == o.status &&
-          template == o.template
+          template == o.template &&
+          error_code == o.error_code
     end
 
     # @see the `==` method
@@ -166,7 +167,7 @@ module TCAClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, title, status, template].hash
+      [id, title, status, template, error_code].hash
     end
 
     # Builds the object from hash
