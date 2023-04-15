@@ -606,10 +606,10 @@ id = 'id_example' # String | The Submission ID (returned upon a successful POST 
 
 begin
   #Get Submission Details
-  result = api_instance.get_submiddion_details(x_turnitin_integration_name, x_turnitin_integration_version, id)
+  result = api_instance.get_submission_details(x_turnitin_integration_name, x_turnitin_integration_version, id)
   p result
 rescue TCAClient::ApiError => e
-  puts "Exception when calling SubmissionApi->get_submiddion_details: #{e}"
+  puts "Exception when calling SubmissionApi->get_submission_details: #{e}"
 end
 # Setup authorization
 TCAClient.configure do |config|
@@ -791,7 +791,7 @@ Class | Method | HTTP request | Description
 *TCAClient::SimilarityApi* | [**request_similarity_report_pdf**](docs/SimilarityApi.md#request_similarity_report_pdf) | **POST** /submissions/{id}/similarity/pdf | Request Pdf download and returns the Pdf Id
 *TCAClient::SubmissionApi* | [**create_submission**](docs/SubmissionApi.md#create_submission) | **POST** /submissions | Create a new Submission
 *TCAClient::SubmissionApi* | [**delete_submission**](docs/SubmissionApi.md#delete_submission) | **DELETE** /submissions/{id} | Deletes a submission and associated similarity report.
-*TCAClient::SubmissionApi* | [**get_submiddion_details**](docs/SubmissionApi.md#get_submiddion_details) | **GET** /submissions/{id} | Get Submission Details
+*TCAClient::SubmissionApi* | [**get_submission_details**](docs/SubmissionApi.md#get_submission_details) | **GET** /submissions/{id} | Get Submission Details
 *TCAClient::SubmissionApi* | [**recover_submission**](docs/SubmissionApi.md#recover_submission) | **PUT** /submissions/{id}/recover | Recover a soft deleted submission
 *TCAClient::SubmissionApi* | [**upload_submitted_file**](docs/SubmissionApi.md#upload_submitted_file) | **PUT** /submissions/{id}/original | Upload Submitted File
 *TCAClient::WebhookApi* | [**delete_webhook**](docs/WebhookApi.md#delete_webhook) | **DELETE** /webhooks/{id} | Delete Webhook endpoint

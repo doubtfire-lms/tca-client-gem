@@ -6,7 +6,7 @@ All URIs are relative to *https://app-us.turnitin.com/api/v1*
 | ------ | ------------ | ----------- |
 | [**create_submission**](SubmissionApi.md#create_submission) | **POST** /submissions | Create a new Submission |
 | [**delete_submission**](SubmissionApi.md#delete_submission) | **DELETE** /submissions/{id} | Deletes a submission and associated similarity report. |
-| [**get_submiddion_details**](SubmissionApi.md#get_submiddion_details) | **GET** /submissions/{id} | Get Submission Details |
+| [**get_submission_details**](SubmissionApi.md#get_submission_details) | **GET** /submissions/{id} | Get Submission Details |
 | [**recover_submission**](SubmissionApi.md#recover_submission) | **PUT** /submissions/{id}/recover | Recover a soft deleted submission |
 | [**upload_submitted_file**](SubmissionApi.md#upload_submitted_file) | **PUT** /submissions/{id}/original | Upload Submitted File |
 
@@ -161,9 +161,9 @@ end
 - **Accept**: application/json
 
 
-## get_submiddion_details
+## get_submission_details
 
-> <Submission> get_submiddion_details(x_turnitin_integration_name, x_turnitin_integration_version, id)
+> <Submission> get_submission_details(x_turnitin_integration_name, x_turnitin_integration_version, id)
 
 Get Submission Details
 
@@ -187,28 +187,28 @@ id = 'id_example' # String | The Submission ID (returned upon a successful POST 
 
 begin
   # Get Submission Details
-  result = api_instance.get_submiddion_details(x_turnitin_integration_name, x_turnitin_integration_version, id)
+  result = api_instance.get_submission_details(x_turnitin_integration_name, x_turnitin_integration_version, id)
   p result
 rescue TCAClient::ApiError => e
-  puts "Error when calling SubmissionApi->get_submiddion_details: #{e}"
+  puts "Error when calling SubmissionApi->get_submission_details: #{e}"
 end
 ```
 
-#### Using the get_submiddion_details_with_http_info variant
+#### Using the get_submission_details_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Submission>, Integer, Hash)> get_submiddion_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id)
+> <Array(<Submission>, Integer, Hash)> get_submission_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id)
 
 ```ruby
 begin
   # Get Submission Details
-  data, status_code, headers = api_instance.get_submiddion_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id)
+  data, status_code, headers = api_instance.get_submission_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Submission>
 rescue TCAClient::ApiError => e
-  puts "Error when calling SubmissionApi->get_submiddion_details_with_http_info: #{e}"
+  puts "Error when calling SubmissionApi->get_submission_details_with_http_info: #{e}"
 end
 ```
 

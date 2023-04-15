@@ -58,14 +58,14 @@ describe 'SubmissionApi' do
     end
   end
 
-  # unit tests for get_submiddion_details
+  # unit tests for get_submission_details
   # Get Submission Details
   # @param x_turnitin_integration_name a human readable string representing the type of integration being used
   # @param x_turnitin_integration_version the version of the integration platform being used
   # @param id The Submission ID (returned upon a successful POST to /submissions) 
   # @param [Hash] opts the optional parameters
   # @return [Submission]
-  describe 'get_submiddion_details test' do
+  describe 'get_submission_details test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

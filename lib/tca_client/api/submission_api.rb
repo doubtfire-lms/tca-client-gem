@@ -183,8 +183,8 @@ module TCAClient
     # @param id [String] The Submission ID (returned upon a successful POST to /submissions) 
     # @param [Hash] opts the optional parameters
     # @return [Submission]
-    def get_submiddion_details(x_turnitin_integration_name, x_turnitin_integration_version, id, opts = {})
-      data, _status_code, _headers = get_submiddion_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id, opts)
+    def get_submission_details(x_turnitin_integration_name, x_turnitin_integration_version, id, opts = {})
+      data, _status_code, _headers = get_submission_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id, opts)
       data
     end
 
@@ -194,21 +194,21 @@ module TCAClient
     # @param id [String] The Submission ID (returned upon a successful POST to /submissions) 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Submission, Integer, Hash)>] Submission data, response status code and response headers
-    def get_submiddion_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id, opts = {})
+    def get_submission_details_with_http_info(x_turnitin_integration_name, x_turnitin_integration_version, id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SubmissionApi.get_submiddion_details ...'
+        @api_client.config.logger.debug 'Calling API: SubmissionApi.get_submission_details ...'
       end
       # verify the required parameter 'x_turnitin_integration_name' is set
       if @api_client.config.client_side_validation && x_turnitin_integration_name.nil?
-        fail ArgumentError, "Missing the required parameter 'x_turnitin_integration_name' when calling SubmissionApi.get_submiddion_details"
+        fail ArgumentError, "Missing the required parameter 'x_turnitin_integration_name' when calling SubmissionApi.get_submission_details"
       end
       # verify the required parameter 'x_turnitin_integration_version' is set
       if @api_client.config.client_side_validation && x_turnitin_integration_version.nil?
-        fail ArgumentError, "Missing the required parameter 'x_turnitin_integration_version' when calling SubmissionApi.get_submiddion_details"
+        fail ArgumentError, "Missing the required parameter 'x_turnitin_integration_version' when calling SubmissionApi.get_submission_details"
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SubmissionApi.get_submiddion_details"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SubmissionApi.get_submission_details"
       end
       # resource path
       local_var_path = '/submissions/{id}'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
@@ -236,7 +236,7 @@ module TCAClient
       auth_names = opts[:debug_auth_names] || ['api_key']
 
       new_options = opts.merge(
-        :operation => :"SubmissionApi.get_submiddion_details",
+        :operation => :"SubmissionApi.get_submission_details",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -247,7 +247,7 @@ module TCAClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SubmissionApi#get_submiddion_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SubmissionApi#get_submission_details\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
