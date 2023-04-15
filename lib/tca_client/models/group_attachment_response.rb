@@ -28,6 +28,8 @@ module TCAClient
     # template
     attr_accessor :template
 
+    attr_accessor :error_code
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -57,6 +59,7 @@ module TCAClient
         :'title' => :'title',
         :'status' => :'status',
         :'template' => :'template'
+        :'error_code' => :'error_code'
       }
     end
 
@@ -71,7 +74,8 @@ module TCAClient
         :'id' => :'String',
         :'title' => :'String',
         :'status' => :'String',
-        :'template' => :'Boolean'
+        :'template' => :'Boolean',
+        :'error_code' => :'String'
       }
     end
 
@@ -110,6 +114,10 @@ module TCAClient
 
       if attributes.key?(:'template')
         self.template = attributes[:'template']
+      end
+
+      if attributes.key?(:'error_code')
+        self.template = attributes[:'error_code']
       end
     end
 
